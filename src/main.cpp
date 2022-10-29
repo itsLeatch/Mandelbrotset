@@ -47,20 +47,20 @@ void update(const sf::Event& events) {
 	case sf::Event::KeyPressed: {
 
 		if (sf::Keyboard::isKeyPressed(sf::Keyboard::W)) {
-			camera.move(sf::Vector2f(0.0f, -.15f * zoom / 2 * timeSinceLastFrame));
+			camera.move(sf::Vector2f(0.0f, -.15f * zoom / timeSinceLastFrame));
 			window.setView(camera);
 		}
 		else if (sf::Keyboard::isKeyPressed(sf::Keyboard::S)) {
-			camera.move(sf::Vector2f(0.0f, .15f * zoom / 2 * timeSinceLastFrame));
+			camera.move(sf::Vector2f(0.0f, .15f * zoom / timeSinceLastFrame));
 			window.setView(camera);
 		}
 
 		if (sf::Keyboard::isKeyPressed(sf::Keyboard::A)) {
-			camera.move(sf::Vector2f(-.15f * zoom / 2 * timeSinceLastFrame, 0.0f));
+			camera.move(sf::Vector2f(-.15f * zoom / timeSinceLastFrame, 0.0f));
 			window.setView(camera);
 		}
 		else if (sf::Keyboard::isKeyPressed(sf::Keyboard::D)) {
-			camera.move(sf::Vector2f(.15f * zoom / 2 * timeSinceLastFrame, 0.0f));
+			camera.move(sf::Vector2f(.15f * zoom / timeSinceLastFrame, 0.0f));
 			window.setView(camera);
 		}
 
