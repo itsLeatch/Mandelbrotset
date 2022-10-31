@@ -15,10 +15,10 @@ double zReal = 0;
 double zImaginary = 0;
 
 while(iteration < maxIteration && zReal * zReal + zImaginary * zImaginary <= 4){
-double temp = zReal * zReal - zImaginary * zImaginary + gl_TexCoord[0].x;
-zImaginary = 2 * zReal * zImaginary + gl_TexCoord[0].y;
-zReal = temp;
-iteration++;
+    double temp = zReal * zReal - zImaginary * zImaginary + gl_TexCoord[0].x;
+    zImaginary = 2 * zReal * zImaginary + gl_TexCoord[0].y;
+    zReal = temp;
+    iteration++;
 }
 double colorVal = (double) iteration / maxIteration;
 
